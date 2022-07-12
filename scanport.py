@@ -20,8 +20,8 @@ for port in ports:
     socc.settimeout(1) #время для сокета
     try:
         socc.connect((name, port)) #подключение к удаленному сокету
-    except socket.error:
-        pass
+    except Exception as err:
+        print(err)
     else:
         socc.close() #закрываем соединение
         print(name + " - " + str(port) + ' открытые порты') #выводим на экран открытые порты
