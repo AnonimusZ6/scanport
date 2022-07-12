@@ -21,7 +21,7 @@ for port in ports:
     try:
         socc.connect((name, port)) #подключение к удаленному сокету
     except Exception as err:
-        print(err)
+        print(str(err))
     else:
         socc.close() #закрываем соединение
         print(name + " - " + str(port) + ' открытые порты') #выводим на экран открытые порты
